@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員登入</title>
+    <style>
+        body{
+            font-family:Roboto;
+            background-color: #e76f51;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login{
+            background-color: #0b132b;
+            width: 425px;
+            color:#f8f9fa;
+            padding: 40px;
+            box-shadow: 10px 10px 25px #000000;
+            text-align:center;
+            border-radius: 22px;
+        }
+        .login input{
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            background: none;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 22px;
+            outline: none;
+            color:#f8f9fa;
+        }
+        .login input[type="text"], .login input[type="password"]{
+            border:2px solid #3498db;
+            width: 220px;
+        }
+        .login input[type="submit"]{
+            width:150px;
+            border:2px solid #2ecc71;
+            cursor: pointer;
+        }
+        .login input[type="text"]:focus, .login input[type="password"]:focus{
+            border-color: #2ecc71;
+            width: 280px;
+            transition: 0.5s;
+        }
+        .login input[type="submit"]:hover{
+            background-color: #2ecc71;
+            transition: 0.5s;
+        }
+        .signon{
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            background: none;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 22px;
+            outline: none;
+            color:#f8f9fa;
+            width:150px;
+            border:2px solid #2ecc71;
+            cursor: pointer;
+        }
+        .signon:hover{
+            background-color: #2ecc71;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+    <form action="/signin" class="login" method="post">
+        <h1>心情留言板</h1>
+        <input type="text" name="email" placeholder="輸入您電子郵件"/>
+        <input type="password" name="password" placeholder="輸入您的密碼"/>
+        <input type="submit" value="登入"/>
+        <button type="button" class="signon" onclick="location.href='http://localhost:3000/signon'">註冊</button>
+    </form>
+    </div>
+</body>
+</html>
