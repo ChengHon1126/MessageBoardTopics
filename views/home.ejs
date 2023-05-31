@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心情留言板</title>
+    <style>
+body{
+    font-family: Roboto;
+    background-color: #e76f51;
+    
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.list{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap
+
+}
+.list:hover{
+    transition: 0.5s;
+}
+.product{
+    flex:none;
+    width:20%;
+    margin:10px;
+    background-color: #0b132b;
+    border-radius: 22px;
+    padding: 60px;
+    color: #f0f1f2;
+    box-shadow: 10px 10px 25px #00000080;
+    font-size: 26px;
+}
+@media(max-width:1250px){
+    .list{
+        flex-wrap:wrap;
+    }
+    .product{
+        width: 45%;
+    }
+}
+
+.login{
+    background-color: #0b132b;
+    width:425px;
+    color:#f8f9fa;
+    padding: 40px;
+    box-shadow: 10px 10px 25px #00000080;
+    text-align: center;
+    border-radius: 22px; 
+}
+
+.login input{
+    display: block;
+    margin: 20px auto ;
+    text-align: center;
+    background: none;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 22px;
+    outline: none;
+    color: #f8f9fa;
+}
+
+.login input[type="text"], .login input[type="password"]{
+    border: 2px solid #3498db;
+    width: 220px;
+}
+.login input[type="submit"]{
+    width:150px;
+    border: 2px solid #2ecc71;
+    cursor: pointer;
+}
+.login input[type="text"]:focus, .login input[type="password"]:focus{
+    border-color:#2ecc71;
+    width: 280px;
+    transition: 0.5s;
+}
+.login input[type="submit"]:hover{
+    background-color: #2ecc71;
+    transition: 0.5s;
+}
+    </style>
+</head>
+<body>
+    <div class="center">
+    <form action="/update" class="login">
+        <h1>心情留言板</h1>
+        <input type="text" name="name" placeholder="暱稱"/>
+        <input type="text" name="message" placeholder="請輸入留言"/>
+        <input type="submit" value="留言"/>
+    </form>
+    </div>
+
+    <div class="list"><% for(let i=0;i<data.length;i++){%>
+        <div class="product"><%=data[i].name%>：<br/><%=data[i].message%></div>
+    <%}%>
+    </div>
+    
+    
+    
+</html>
