@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open file",
+            "file": "/Users/cheng/Desktop/node-express-message/views/index.js"
+        },
+        {
+            "type": "node-terminal",
+            "name": "執行指令碼: test",
+            "request": "launch",
+            "command": "node index.js",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

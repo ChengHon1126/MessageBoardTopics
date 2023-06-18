@@ -1,5 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+        body{
+            font-family:Roboto;
+            background-color: #e76f51;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .signup input{
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            background: none;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 22px;
+            outline: none;
+            color:#f8f9fa;
+        }
+        .signup{
+            background-color: #0b132b;
+            width: 425px;
+            color:#f8f9fa;
+            padding: 40px;
+            box-shadow: 10px 10px 25px #000000;
+            text-align:center;
+            border-radius: 22px;
+        }
+        .signup input[type="text"], .signup input[type="password"]{
+            border:2px solid #3498db;
+            width: 220px;
+        }
+        .signup input[type="submit"]{
+            width:150px;
+            border:2px solid #2ecc71;
+            cursor: pointer;
+        }
+        .signup input[type="text"]:focus, .signup input[type="password"]:focus{
+            border-color: #2ecc71;
+            width: 280px;
+            transition: 0.5s;
+        }
+        .button{
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            background: none;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 22px;
+            outline: none;
+            color:#f8f9fa;
+            width:150px;
+            border:2px solid #2ecc71;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color: #2ecc71;
+            transition: 0.5s;
+        }
+    </style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +68,13 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/signupTurn" method="post">
+    <div class="center">
+    <form action="/signupTurn" method="post" class="signup">
         <input type="text" name="name" placeholder="新增暱稱"/>
         <input type="text" name="email" placeholder="註冊電子郵件"/>
         <input type="password" name="password" placeholder="註冊密碼"/>
-        <input type="submit" value="註冊">
+        <input type="submit" value="註冊" class="button">
     </form>
-    
+    </div>
 </body>
 </html>
